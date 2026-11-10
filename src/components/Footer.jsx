@@ -93,7 +93,7 @@ export default function Footer({ onSelectService }) {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <a href="#home" className="footer__logo" aria-label="Northlight Education — back to top">
+            <a href="#home" className="footer__logo" aria-label="EntryCollege — back to top">
               <Logo tone="light" />
             </a>
             <h2 className="footer__heading" id="footer-heading">
@@ -197,7 +197,7 @@ export default function Footer({ onSelectService }) {
 
           <div className="footer__map">
             <iframe
-              title="Map showing the Northlight Education office location"
+              title="Map showing the EntryCollege office location"
               src={site.contact.mapEmbed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -220,7 +220,7 @@ export default function Footer({ onSelectService }) {
         </div>
 
         <div className="footer__bottom">
-          <p>© {currentYear} Northlight Education. All rights reserved.</p>
+          <p>© {currentYear} EntryCollege. All rights reserved.</p>
           <div className="footer__legal">
             <button type="button" onClick={openPrivacy}>
               Privacy Policy
@@ -235,7 +235,7 @@ export default function Footer({ onSelectService }) {
       </div>
 
       <p className="footer__watermark" aria-hidden="true">
-        Northlight
+        EntryCollege
       </p>
 
       <PlaceholderModal

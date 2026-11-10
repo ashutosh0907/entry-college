@@ -16,7 +16,7 @@ const icons = {
   heart: HeartHandshake,
 };
 
-const tones = ['#356ae6', '#d18a26', '#2b8a7e', '#142b4a'];
+const tones = ['#022c50', '#e8610b', '#0a4c78', '#063a63'];
 
 export default function WhyChooseUs() {
   return (

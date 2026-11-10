@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Northlight Education — global styles
+   EntryCollege — global styles
    Contents
    01. Base & utilities
    02. Shared UI (logo, buttons, section headings, reveal)
@@ -99,7 +99,7 @@ textarea {
 }
 
 ::selection {
-  background: rgba(53, 106, 230, 0.2);
+  background: rgba(2, 44, 80, 0.2);
   color: var(--navy-900);
 }
 
@@ -139,50 +139,18 @@ textarea {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   line-height: 1;
 }
 
-.logo__mark {
-  width: 41px;
-  height: 41px;
-  flex: none;
-  filter: drop-shadow(0 6px 14px rgba(13, 33, 55, 0.18));
+.logo__image {
+  display: block;
+  width: auto;
+  height: 56px;
+  filter: drop-shadow(0 5px 12px rgba(2, 44, 80, 0.16));
+  transition: height 0.35s var(--ease);
 }
 
-.logo__text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.28rem;
-}
-
-.logo__name {
-  font-family: var(--font-display);
-  font-size: 1.38rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--navy-900);
-}
-
-.logo__descriptor {
-  font-size: 0.52rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.logo--light .logo__name {
-  color: #fff;
-}
-
-.logo--light .logo__descriptor {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.logo--light .logo__mark {
+.logo--light .logo__image {
   filter: none;
 }
 
@@ -258,12 +226,16 @@ textarea {
   color: #fff;
 }
 
+.section-head--light .eyebrow {
+  color: var(--orange-500);
+}
+
 .section-head--light .section-head__title em {
   color: var(--orange-500);
 }
 
 .section-head--light .section-head__description {
-  color: #a9b8cb;
+  color: #a3b0bd;
 }
 
 /* Buttons */
@@ -312,12 +284,12 @@ textarea {
 .btn--primary {
   background: var(--navy-900);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(13, 33, 55, 0.16);
+  box-shadow: 0 10px 24px rgba(2, 44, 80, 0.16);
 }
 
 .btn--primary:hover {
-  background: var(--blue-600);
-  box-shadow: 0 14px 32px rgba(53, 106, 230, 0.28);
+  background: var(--navy-700);
+  box-shadow: 0 14px 32px rgba(2, 44, 80, 0.28);
 }
 
 .btn--ghost {
@@ -335,12 +307,12 @@ textarea {
 .btn--accent {
   background: var(--orange-500);
   color: var(--navy-950);
-  box-shadow: 0 12px 28px rgba(244, 163, 64, 0.26);
+  box-shadow: 0 12px 28px rgba(242, 107, 15, 0.26);
 }
 
 .btn--accent:hover {
-  background: #ffb45a;
-  box-shadow: 0 16px 34px rgba(244, 163, 64, 0.34);
+  background: #ff8a3d;
+  box-shadow: 0 16px 34px rgba(242, 107, 15, 0.34);
 }
 
 .btn--ghost-light {
@@ -388,15 +360,15 @@ textarea {
 .header--scrolled {
   background: rgba(249, 250, 247, 0.88);
   box-shadow:
-    0 1px 0 rgba(13, 33, 55, 0.07),
-    0 12px 38px rgba(13, 33, 55, 0.045);
+    0 1px 0 rgba(2, 44, 80, 0.07),
+    0 12px 38px rgba(2, 44, 80, 0.045);
   -webkit-backdrop-filter: blur(18px) saturate(1.35);
   backdrop-filter: blur(18px) saturate(1.35);
 }
 
 .header--open {
   background: rgba(249, 250, 247, 0.98);
-  box-shadow: 0 1px 0 rgba(13, 33, 55, 0.08);
+  box-shadow: 0 1px 0 rgba(2, 44, 80, 0.08);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
@@ -412,6 +384,10 @@ textarea {
 
 .header--scrolled .header__inner {
   min-height: 74px;
+}
+
+.header--scrolled .logo__image {
+  height: 50px;
 }
 
 .header__brand {
@@ -523,7 +499,7 @@ textarea {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(8, 23, 38, 0.5);
+  background: rgba(1, 26, 48, 0.5);
   opacity: 0;
   cursor: default;
   -webkit-backdrop-filter: blur(4px);
@@ -547,7 +523,7 @@ textarea {
   overflow-y: auto;
   overscroll-behavior: contain;
   background: var(--bg);
-  box-shadow: -24px 0 60px rgba(8, 23, 38, 0.18);
+  box-shadow: -24px 0 60px rgba(1, 26, 48, 0.18);
   transform: translateX(100%);
   transition: transform 0.45s var(--ease-out);
 }
@@ -566,7 +542,7 @@ textarea {
 }
 
 .mobile-menu__links li + li {
-  border-top: 1px solid rgba(13, 33, 55, 0.08);
+  border-top: 1px solid rgba(2, 44, 80, 0.08);
 }
 
 .mobile-menu__links a {
@@ -655,9 +631,9 @@ textarea {
   padding-top: calc(var(--header-height) + clamp(2.75rem, 5.5vw, 4.75rem));
   padding-bottom: clamp(4.5rem, 8vw, 7rem);
   background:
-    radial-gradient(1050px 680px at 86% 15%, rgba(53, 106, 230, 0.09), transparent 64%),
-    radial-gradient(820px 580px at 7% 84%, rgba(244, 163, 64, 0.1), transparent 62%),
-    linear-gradient(180deg, #fafbf8 0%, #f8f9f6 64%, #f2f4ef 100%);
+    radial-gradient(1050px 680px at 86% 15%, rgba(2, 44, 80, 0.09), transparent 64%),
+    radial-gradient(820px 580px at 7% 84%, rgba(242, 107, 15, 0.1), transparent 62%),
+    linear-gradient(180deg, #fdfbf7 0%, #faf7f2 64%, #f4eee5 100%);
 }
 
 .hero::after {
@@ -667,7 +643,7 @@ textarea {
   bottom: 0;
   left: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(13, 33, 55, 0.09), transparent);
+  background: linear-gradient(90deg, transparent, rgba(2, 44, 80, 0.09), transparent);
 }
 
 .hero__decor {
@@ -687,7 +663,7 @@ textarea {
   right: -170px;
   width: 560px;
   height: 560px;
-  border: 1px solid rgba(53, 106, 230, 0.12);
+  border: 1px solid rgba(2, 44, 80, 0.12);
 }
 
 .hero__glow--warm {
@@ -695,7 +671,7 @@ textarea {
   left: -130px;
   width: 430px;
   height: 430px;
-  border: 1px solid rgba(244, 163, 64, 0.16);
+  border: 1px solid rgba(242, 107, 15, 0.16);
 }
 
 .hero__dot-grid {
@@ -704,7 +680,7 @@ textarea {
   left: -28px;
   width: 190px;
   height: 210px;
-  background-image: radial-gradient(circle, rgba(13, 33, 55, 0.18) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(2, 44, 80, 0.18) 1px, transparent 1px);
   background-size: 19px 19px;
   -webkit-mask-image: linear-gradient(135deg, #000 20%, transparent 82%);
   mask-image: linear-gradient(135deg, #000 20%, transparent 82%);
@@ -717,7 +693,7 @@ textarea {
   right: 39%;
   width: 160px;
   height: 160px;
-  border: 1px dashed rgba(53, 106, 230, 0.2);
+  border: 1px dashed rgba(2, 44, 80, 0.2);
   border-radius: 50%;
 }
 
@@ -727,7 +703,7 @@ textarea {
   bottom: 16%;
   width: 105px;
   height: 1px;
-  background: rgba(13, 33, 55, 0.15);
+  background: rgba(2, 44, 80, 0.15);
 }
 
 .hero__grid {
@@ -799,7 +775,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #4a5b73;
+  color: #4a5a68;
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.45;
@@ -812,7 +788,7 @@ textarea {
   height: 18px;
   flex: none;
   border-radius: 50%;
-  background: rgba(53, 106, 230, 0.1);
+  background: rgba(2, 44, 80, 0.1);
   color: var(--blue-600);
 }
 
@@ -831,8 +807,8 @@ textarea {
   border-radius: 34px;
   background:
     radial-gradient(circle at 78% 16%, rgba(255, 255, 255, 0.2), transparent 32%),
-    linear-gradient(145deg, #3e73ea 0%, #1e4b92 55%, #12345f 100%);
-  box-shadow: 0 32px 70px rgba(53, 106, 230, 0.2);
+    linear-gradient(145deg, #0a4c78 0%, #063a63 55%, #022c50 100%);
+  box-shadow: 0 32px 70px rgba(2, 44, 80, 0.2);
   transform: rotate(3.2deg);
 }
 
@@ -845,8 +821,8 @@ textarea {
   height: 108px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 32% 28%, #ffc97f, var(--orange-500) 66%);
-  box-shadow: 0 20px 42px rgba(244, 163, 64, 0.35);
+    radial-gradient(circle at 32% 28%, #ffb066, var(--orange-500) 66%);
+  box-shadow: 0 20px 42px rgba(242, 107, 15, 0.35);
 }
 
 .hero__visual-orb::after {
@@ -865,7 +841,7 @@ textarea {
   border: 6px solid rgba(255, 255, 255, 0.72);
   border-radius: 28px;
   background: #d9e2ec;
-  box-shadow: 0 34px 84px rgba(13, 33, 55, 0.23);
+  box-shadow: 0 34px 84px rgba(2, 44, 80, 0.23);
 }
 
 .hero__frame img {
@@ -883,7 +859,7 @@ textarea {
 .hero__frame-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 23, 38, 0) 42%, rgba(8, 23, 38, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(1, 26, 48, 0) 42%, rgba(1, 26, 48, 0.6) 100%);
   pointer-events: none;
 }
 
@@ -898,7 +874,7 @@ textarea {
   padding: 0.85rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
-  background: rgba(8, 23, 38, 0.36);
+  background: rgba(1, 26, 48, 0.36);
   color: #fff;
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
@@ -928,7 +904,7 @@ textarea {
   flex: none;
   border-radius: 50%;
   background: var(--orange-500);
-  box-shadow: 0 0 0 5px rgba(244, 163, 64, 0.18);
+  box-shadow: 0 0 0 5px rgba(242, 107, 15, 0.18);
   animation: pulse 3.5s ease-in-out infinite;
 }
 
@@ -943,7 +919,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.93);
-  box-shadow: 0 20px 50px rgba(13, 33, 55, 0.17);
+  box-shadow: 0 20px 50px rgba(2, 44, 80, 0.17);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   animation: floaty 7s ease-in-out infinite;
@@ -1016,7 +992,7 @@ textarea {
   border-radius: 50%;
   background: var(--orange-500);
   color: var(--navy-950);
-  box-shadow: 0 16px 34px rgba(244, 163, 64, 0.34);
+  box-shadow: 0 16px 34px rgba(242, 107, 15, 0.34);
   font-size: 0.55rem;
   font-weight: 800;
   line-height: 1.25;
@@ -1055,10 +1031,10 @@ textarea {
 @keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 5px rgba(244, 163, 64, 0.18);
+    box-shadow: 0 0 0 5px rgba(242, 107, 15, 0.18);
   }
   50% {
-    box-shadow: 0 0 0 9px rgba(244, 163, 64, 0.05);
+    box-shadow: 0 0 0 9px rgba(242, 107, 15, 0.05);
   }
 }
 
@@ -1078,8 +1054,8 @@ textarea {
   inset: 0;
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.02), transparent 40%),
-    radial-gradient(850px 600px at 92% 0%, rgba(53, 106, 230, 0.22), transparent 60%),
-    radial-gradient(720px 540px at 3% 100%, rgba(244, 163, 64, 0.07), transparent 60%);
+    radial-gradient(850px 600px at 92% 0%, rgba(2, 44, 80, 0.22), transparent 60%),
+    radial-gradient(720px 540px at 3% 100%, rgba(242, 107, 15, 0.07), transparent 60%);
   pointer-events: none;
 }
 
@@ -1097,7 +1073,7 @@ textarea {
   width: 720px;
   height: 720px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(53, 106, 230, 0.25), transparent 67%);
+  background: radial-gradient(circle, rgba(2, 44, 80, 0.25), transparent 67%);
   filter: blur(18px);
 }
 
@@ -1125,7 +1101,7 @@ textarea {
   position: absolute;
   top: 14%;
   right: 5.5%;
-  color: rgba(244, 163, 64, 0.55);
+  color: rgba(242, 107, 15, 0.55);
   font-size: 1.85rem;
   line-height: 1;
 }
@@ -1240,7 +1216,7 @@ textarea {
 .service-card__media-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8, 23, 38, 0.08) 0%, transparent 45%, rgba(8, 23, 38, 0.35) 100%);
+  background: linear-gradient(180deg, rgba(1, 26, 48, 0.08) 0%, transparent 45%, rgba(1, 26, 48, 0.35) 100%);
   pointer-events: none;
 }
 
@@ -1254,7 +1230,7 @@ textarea {
   padding: 0.34rem 0.58rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 7px;
-  background: rgba(8, 23, 38, 0.56);
+  background: rgba(1, 26, 48, 0.56);
   color: #fff;
   font-size: 0.58rem;
   font-weight: 800;
@@ -1290,7 +1266,7 @@ textarea {
   border-radius: 14px;
   background: var(--card-accent);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(13, 33, 55, 0.2);
+  box-shadow: 0 10px 24px rgba(2, 44, 80, 0.2);
   transition: transform 0.35s var(--ease);
 }
 
@@ -1420,7 +1396,7 @@ textarea {
   align-items: center;
   gap: 0.35rem;
   padding-bottom: 0.08rem;
-  border-bottom: 1px solid rgba(244, 163, 64, 0.45);
+  border-bottom: 1px solid rgba(242, 107, 15, 0.45);
   color: #fff;
   font-weight: 700;
   transition:
@@ -1465,7 +1441,7 @@ textarea {
   border: 1px solid #e6dfd1;
   border-radius: 20px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(244, 163, 64, 0.13), transparent 42%),
+    radial-gradient(circle at 100% 0%, rgba(242, 107, 15, 0.13), transparent 42%),
     var(--cream);
 }
 
@@ -1492,7 +1468,7 @@ textarea {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: rgba(53, 106, 230, 0.1);
+  background: rgba(2, 44, 80, 0.1);
   color: var(--blue-600);
 }
 
@@ -1653,7 +1629,7 @@ textarea {
   overflow: hidden;
   padding-block: var(--section-space);
   background:
-    radial-gradient(760px 420px at 100% 0%, rgba(53, 106, 230, 0.05), transparent 70%),
+    radial-gradient(760px 420px at 100% 0%, rgba(2, 44, 80, 0.05), transparent 70%),
     var(--cream);
 }
 
@@ -1664,7 +1640,7 @@ textarea {
   right: -20px;
   width: 180px;
   height: 190px;
-  background-image: radial-gradient(circle, rgba(13, 33, 55, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(2, 44, 80, 0.12) 1px, transparent 1px);
   background-size: 18px 18px;
   -webkit-mask-image: linear-gradient(180deg, transparent, #000);
   mask-image: linear-gradient(180deg, transparent, #000);
@@ -1688,8 +1664,8 @@ textarea {
   background: linear-gradient(
     90deg,
     rgba(20, 43, 74, 0.18),
-    rgba(53, 106, 230, 0.4) 45%,
-    rgba(244, 163, 64, 0.58)
+    rgba(2, 44, 80, 0.4) 45%,
+    rgba(242, 107, 15, 0.58)
   );
   transition: transform 1.5s var(--ease-out) 0.2s;
 }
@@ -1712,8 +1688,8 @@ textarea {
   background: linear-gradient(
     180deg,
     rgba(20, 43, 74, 0.18),
-    rgba(53, 106, 230, 0.4) 45%,
-    rgba(244, 163, 64, 0.58)
+    rgba(2, 44, 80, 0.4) 45%,
+    rgba(242, 107, 15, 0.58)
   );
   transform: scaleY(0);
   transform-origin: top;
@@ -1759,7 +1735,7 @@ textarea {
   width: 64px;
   height: 64px;
   margin: 0 auto 1.4rem;
-  border: 1px solid rgba(13, 33, 55, 0.17);
+  border: 1px solid rgba(2, 44, 80, 0.17);
   border-radius: 50%;
   background: var(--cream);
   box-shadow: 0 0 0 8px var(--cream);
@@ -1786,7 +1762,7 @@ textarea {
   content: '';
   position: absolute;
   inset: -6px;
-  border: 1px dashed rgba(53, 106, 230, 0.28);
+  border: 1px dashed rgba(2, 44, 80, 0.28);
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s var(--ease);
@@ -1878,7 +1854,7 @@ textarea {
   left: 12px;
   width: 180px;
   height: 150px;
-  background-image: radial-gradient(circle, rgba(13, 33, 55, 0.16) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(2, 44, 80, 0.16) 1px, transparent 1px);
   background-size: 18px 18px;
   -webkit-mask-image: linear-gradient(135deg, #000, transparent 78%);
   mask-image: linear-gradient(135deg, #000, transparent 78%);
@@ -1901,7 +1877,7 @@ textarea {
   overflow: hidden;
   border-radius: 26px;
   background: #dfe6ec;
-  box-shadow: 0 30px 64px rgba(13, 33, 55, 0.12);
+  box-shadow: 0 30px 64px rgba(2, 44, 80, 0.12);
 }
 
 .about__image-main img {
@@ -1926,7 +1902,7 @@ textarea {
   border: 7px solid var(--bg);
   border-radius: 20px;
   background: #dfe6ec;
-  box-shadow: 0 20px 44px rgba(13, 33, 55, 0.16);
+  box-shadow: 0 20px 44px rgba(2, 44, 80, 0.16);
 }
 
 .about__image-inset img {
@@ -1952,7 +1928,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 13px;
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 14px 34px rgba(13, 33, 55, 0.13);
+  box-shadow: 0 14px 34px rgba(2, 44, 80, 0.13);
   color: var(--navy-900);
   font-family: var(--font-display);
   font-size: 0.96rem;
@@ -2061,8 +2037,8 @@ textarea {
   overflow: hidden;
   padding-block: var(--section-space);
   background:
-    radial-gradient(800px 480px at 8% 0%, rgba(244, 163, 64, 0.055), transparent 65%),
-    linear-gradient(180deg, #f8f9f6 0%, #eef2f7 100%);
+    radial-gradient(800px 480px at 8% 0%, rgba(242, 107, 15, 0.055), transparent 65%),
+    linear-gradient(180deg, #faf7f2 0%, #f4eee5 100%);
 }
 
 .testimonials::after {
@@ -2070,7 +2046,7 @@ textarea {
   position: absolute;
   top: 1.5rem;
   right: 4%;
-  color: rgba(53, 106, 230, 0.06);
+  color: rgba(2, 44, 80, 0.06);
   font-family: var(--font-display);
   font-size: 20rem;
   font-weight: 400;
@@ -2200,7 +2176,7 @@ textarea {
 }
 
 .testimonial__quote p {
-  color: #293b52;
+  color: #1f3245;
   font-family: var(--font-display);
   font-size: 1.13rem;
   font-weight: 400;
@@ -2290,7 +2266,7 @@ textarea {
   padding: 1.4rem;
   border-radius: 18px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(53, 106, 230, 0.28), transparent 48%),
+    radial-gradient(circle at 100% 0%, rgba(2, 44, 80, 0.28), transparent 48%),
     var(--navy-900);
   color: #fff;
 }
@@ -2313,7 +2289,7 @@ textarea {
   height: 38px;
   margin-bottom: 0.9rem;
   border-radius: 10px;
-  background: rgba(244, 163, 64, 0.14);
+  background: rgba(242, 107, 15, 0.14);
   color: var(--orange-500);
 }
 
@@ -2339,7 +2315,7 @@ textarea {
   align-items: center;
   gap: 0.35rem;
   padding-bottom: 0.08rem;
-  border-bottom: 1px solid rgba(244, 163, 64, 0.4);
+  border-bottom: 1px solid rgba(242, 107, 15, 0.4);
   color: var(--orange-500);
   font-size: 0.77rem;
   font-weight: 800;
@@ -2370,7 +2346,7 @@ textarea {
 
 .faq-item.is-open {
   border-color: #cbd7e8;
-  box-shadow: 0 12px 28px rgba(13, 33, 55, 0.055);
+  box-shadow: 0 12px 28px rgba(2, 44, 80, 0.055);
 }
 
 .faq-item__trigger {
@@ -2446,7 +2422,7 @@ textarea {
   position: relative;
   padding-block: var(--section-space);
   background:
-    radial-gradient(700px 420px at 0% 100%, rgba(53, 106, 230, 0.05), transparent 65%),
+    radial-gradient(700px 420px at 0% 100%, rgba(2, 44, 80, 0.05), transparent 65%),
     var(--bg);
 }
 
@@ -2460,9 +2436,9 @@ textarea {
   padding: clamp(1.8rem, 4.5vw, 4.25rem);
   border-radius: 32px;
   background:
-    radial-gradient(circle at 8% 10%, rgba(53, 106, 230, 0.22), transparent 40%),
-    linear-gradient(135deg, #0b1f34 0%, #123152 58%, #153c65 100%);
-  box-shadow: 0 40px 92px rgba(13, 33, 55, 0.25);
+    radial-gradient(circle at 8% 10%, rgba(2, 44, 80, 0.22), transparent 40%),
+    linear-gradient(135deg, #011a30 0%, #022c50 58%, #063a63 100%);
+  box-shadow: 0 40px 92px rgba(2, 44, 80, 0.25);
 }
 
 .contact__decor {
@@ -2479,7 +2455,7 @@ textarea {
   width: 620px;
   height: 620px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(53, 106, 230, 0.3), transparent 66%);
+  background: radial-gradient(circle, rgba(2, 44, 80, 0.3), transparent 66%);
   filter: blur(14px);
 }
 
@@ -2497,7 +2473,7 @@ textarea {
   position: absolute;
   top: 16%;
   left: 47%;
-  color: rgba(244, 163, 64, 0.5);
+  color: rgba(242, 107, 15, 0.5);
   font-size: 1.35rem;
   line-height: 1;
 }
@@ -2602,7 +2578,7 @@ a.contact__channel:hover strong {
 
 .contact__hours svg {
   flex: none;
-  color: rgba(244, 163, 64, 0.75);
+  color: rgba(242, 107, 15, 0.75);
 }
 
 .contact__actions {
@@ -2625,7 +2601,7 @@ a.contact__channel:hover strong {
   padding: clamp(1.35rem, 3vw, 2.1rem);
   border-radius: 22px;
   background: var(--surface);
-  box-shadow: 0 32px 74px rgba(8, 23, 38, 0.3);
+  box-shadow: 0 32px 74px rgba(1, 26, 48, 0.3);
 }
 
 .contact-form__head {
@@ -2699,7 +2675,7 @@ a.contact__channel:hover strong {
   padding: 0.7rem 0.8rem;
   border: 1px solid var(--border);
   border-radius: 9px;
-  background: #fafbfc;
+  background: #fdfbf8;
   color: var(--navy-900);
   font-size: 0.81rem;
   line-height: 1.5;
@@ -2711,7 +2687,7 @@ a.contact__channel:hover strong {
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: #94a3b8;
+  color: #8a96a3;
   opacity: 1;
 }
 
@@ -2742,7 +2718,7 @@ a.contact__channel:hover strong {
   outline: none;
   border-color: var(--blue-600);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(53, 106, 230, 0.12);
+  box-shadow: 0 0 0 3px rgba(2, 44, 80, 0.12);
 }
 
 .form-field.has-error input,
@@ -2882,7 +2858,7 @@ a.contact__channel:hover strong {
   width: 760px;
   height: 620px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(53, 106, 230, 0.12), transparent 66%);
+  background: radial-gradient(circle, rgba(2, 44, 80, 0.12), transparent 66%);
   filter: blur(20px);
 }
 
@@ -2913,6 +2889,10 @@ a.contact__channel:hover strong {
   display: inline-flex;
   margin-bottom: 1.35rem;
   border-radius: 8px;
+}
+
+.footer__logo .logo__image {
+  height: 66px;
 }
 
 .footer__heading {
@@ -3068,7 +3048,7 @@ a.contact__channel:hover strong {
 
 .footer__map-hours svg {
   flex: none;
-  color: rgba(244, 163, 64, 0.75);
+  color: rgba(242, 107, 15, 0.75);
 }
 
 .footer__directions {
@@ -3077,7 +3057,7 @@ a.contact__channel:hover strong {
   gap: 0.35rem;
   margin-top: 1.15rem;
   padding-bottom: 0.1rem;
-  border-bottom: 1px solid rgba(244, 163, 64, 0.35);
+  border-bottom: 1px solid rgba(242, 107, 15, 0.35);
   color: var(--orange-500);
   font-size: 0.77rem;
   font-weight: 800;
@@ -3097,7 +3077,7 @@ a.contact__channel:hover strong {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
-  background: #122a44;
+  background: #022c50;
   box-shadow: 0 24px 52px rgba(0, 0, 0, 0.18);
 }
 
@@ -3120,7 +3100,7 @@ a.contact__channel:hover strong {
   padding: 0.33rem 0.55rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
-  background: rgba(8, 23, 38, 0.72);
+  background: rgba(1, 26, 48, 0.72);
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.61rem;
   font-weight: 600;
@@ -3145,7 +3125,7 @@ a.contact__channel:hover strong {
   border-radius: 9px;
   background: rgba(255, 255, 255, 0.91);
   color: var(--navy-900);
-  box-shadow: 0 8px 20px rgba(8, 23, 38, 0.22);
+  box-shadow: 0 8px 20px rgba(1, 26, 48, 0.22);
   transition:
     background-color 0.25s var(--ease),
     transform 0.25s var(--ease);
@@ -3163,7 +3143,7 @@ a.contact__channel:hover strong {
   justify-content: space-between;
   gap: 0.8rem 1.5rem;
   padding: 1.55rem 0;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.46);
   font-size: 0.71rem;
 }
 
@@ -3188,7 +3168,7 @@ a.contact__channel:hover strong {
 }
 
 .footer__bottom-note {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 0.68rem;
   letter-spacing: 0.05em;
 }
@@ -3219,7 +3199,7 @@ a.contact__channel:hover strong {
   display: grid;
   place-items: center;
   padding: 1.25rem;
-  background: rgba(8, 23, 38, 0.62);
+  background: rgba(1, 26, 48, 0.62);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   animation: modal-fade 0.22s var(--ease) both;
@@ -3252,7 +3232,7 @@ a.contact__channel:hover strong {
   height: 37px;
   border: 1px solid var(--border);
   border-radius: 50%;
-  background: #f6f8f9;
+  background: #fbf8f3;
   color: var(--navy-800);
   transition:
     background-color 0.25s var(--ease),
@@ -3261,7 +3241,7 @@ a.contact__channel:hover strong {
 
 .modal__close:hover {
   border-color: var(--border-strong);
-  background: #eef2f5;
+  background: #f6f1e8;
 }
 
 .modal__title {
@@ -3598,13 +3578,16 @@ a.contact__channel:hover strong {
     min-height: 66px;
   }
 
-  .logo__mark {
-    width: 38px;
-    height: 38px;
+  .logo__image {
+    height: 48px;
   }
 
-  .logo__name {
-    font-size: 1.26rem;
+  .header--scrolled .logo__image {
+    height: 44px;
+  }
+
+  .footer__logo .logo__image {
+    height: 58px;
   }
 
   .header__cta {
@@ -3914,14 +3897,6 @@ a.contact__channel:hover strong {
 }
 
 @media (max-width: 480px) {
-  .logo__descriptor {
-    display: none;
-  }
-
-  .logo__text {
-    gap: 0;
-  }
-
   .header__actions {
     gap: 0.5rem;
   }

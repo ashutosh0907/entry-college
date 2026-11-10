@@ -4,8 +4,8 @@
  */
 export const site = {
   brand: {
-    name: 'Northlight',
-    descriptor: 'Education',
+    name: 'EntryCollege',
+    descriptor: 'Education Consultancy',
     tagline: "Guidance for what's next.",
   },
 
@@ -21,8 +21,8 @@ export const site = {
     // Placeholder details — update these before going live.
     phone: '+91 98765 43210',
     phoneHref: 'tel:+919876543210',
-    email: 'hello@northlight.example',
-    emailHref: 'mailto:hello@northlight.example',
+    email: 'hello@entrycollege.example',
+    emailHref: 'mailto:hello@entrycollege.example',
     addressLines: ['Level 2, Knowledge Square', 'MG Road, Bengaluru, Karnataka 560001'],
     address: 'Level 2, Knowledge Square, MG Road, Bengaluru, Karnataka 560001',
     hours: 'Monday – Saturday · 9:30 AM – 6:30 PM',

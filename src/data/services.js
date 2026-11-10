@@ -8,8 +8,8 @@ export const services = [
     number: '01',
     title: 'Engineering',
     icon: 'engineering',
-    accent: '#356ae6',
-    accentSoft: '#ecf1fe',
+    accent: '#022c50',
+    accentSoft: '#e8eff6',
     image: engineeringImage,
     imageAlt: 'Engineering student working with technology in a modern laboratory',
     description:
@@ -28,8 +28,8 @@ export const services = [
     number: '02',
     title: 'Management',
     icon: 'management',
-    accent: '#d18a26',
-    accentSoft: '#fdf3e4',
+    accent: '#e8610b',
+    accentSoft: '#fdf0e5',
     image: managementImage,
     imageAlt: 'Business students collaborating around a table in a modern workspace',
     description:
@@ -48,8 +48,8 @@ export const services = [
     number: '03',
     title: 'BCA / BBA',
     icon: 'undergraduate',
-    accent: '#2b8a7e',
-    accentSoft: '#eaf6f3',
+    accent: '#0a4c78',
+    accentSoft: '#e9f1f7',
     image: bcaImage,
     imageAlt: 'College students learning together with laptops in a bright study space',
     description:

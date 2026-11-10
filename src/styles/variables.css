@@ -1,31 +1,31 @@
 :root {
   color-scheme: light;
 
-  /* Brand palette */
-  --navy-950: #081726;
-  --navy-900: #0d2137;
-  --navy-800: #142b4a;
-  --navy-700: #1d3b5e;
-  --blue-600: #356ae6;
-  --blue-500: #4d7cf0;
-  --blue-100: #e9effd;
-  --orange-500: #f4a340;
-  --orange-600: #d98a25;
-  --orange-100: #fdf2e2;
-  --teal-600: #2b8a7e;
+  /* Brand palette — sampled from the EntryCollege logo */
+  --navy-950: #011a30;
+  --navy-900: #022c50;
+  --navy-800: #063a63;
+  --navy-700: #0a4c78;
+  --blue-600: #022c50;
+  --blue-500: #0a4c78;
+  --blue-100: #e8eff6;
+  --orange-500: #f26b0f;
+  --orange-600: #d95806;
+  --orange-100: #fdf0e5;
+  --teal-600: #0a4c78;
 
-  /* Neutrals */
-  --bg: #f8f9f6;
-  --bg-soft: #f1f4ef;
-  --cream: #f4f0e7;
+  /* Neutrals — warm paper tones keep the navy and orange feeling inviting */
+  --bg: #faf7f2;
+  --bg-soft: #f4eee5;
+  --cream: #f3ebdf;
   --surface: #ffffff;
-  --text: #172033;
-  --text-soft: #42526a;
-  --muted: #64748b;
-  --border: #e2e7ee;
-  --border-strong: #cdd7e3;
+  --text: #16222f;
+  --text-soft: #41505f;
+  --muted: #6a7684;
+  --border: #e5ded2;
+  --border-strong: #d2c9ba;
   --error: #b42318;
-  --success: #2b8a7e;
+  --success: #0a6b5c;
 
   /* Typography */
   --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -45,9 +45,9 @@
   --radius-xl: 32px;
 
   /* Elevation */
-  --shadow-sm: 0 4px 18px rgba(13, 33, 55, 0.05);
-  --shadow-md: 0 16px 44px rgba(13, 33, 55, 0.09);
-  --shadow-lg: 0 30px 78px rgba(13, 33, 55, 0.15);
+  --shadow-sm: 0 4px 18px rgba(2, 44, 80, 0.05);
+  --shadow-md: 0 16px 44px rgba(2, 44, 80, 0.09);
+  --shadow-lg: 0 30px 78px rgba(2, 44, 80, 0.15);
 
   /* Motion */
   --ease: cubic-bezier(0.22, 0.68, 0.28, 1);

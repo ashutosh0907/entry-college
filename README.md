@@ -1,6 +1,6 @@
-# Northlight Education — Landing Page
+# EntryCollege — Landing Page
 
-A premium, responsive single-page website for an education consultancy, built with React and Vite. The page includes service pathways, the consultancy's process, testimonials, FAQs, a validated callback form, and a footer with an embedded Google Map.
+A premium, responsive single-page website for an education consultancy, built with React and Vite. The page includes service pathways, the consultancy's process, sample testimonials, FAQs, a validated callback form, and a footer with an embedded Google Map.
 
 ## Run locally
 
@@ -17,6 +17,26 @@ npm run preview  # preview the production build
 npm run lint     # lint with oxlint
 ```
 
+## Brand assets
+
+| Asset | File |
+| --- | --- |
+| Primary logo (navy + orange, transparent) | `src/assets/images/entrycollege-logo.png` |
+| Light logo for dark backgrounds | `src/assets/images/entrycollege-logo-light.png` |
+| Favicon (navy tile with the mark) | `public/favicon.png` |
+
+The logo is rendered by `src/components/ui/Logo.jsx`, which switches between the primary and light artwork via the `tone` prop. The header uses the primary logo; the dark footer uses the light variant.
+
+The palette is sampled from the logo:
+
+- Logo navy `#022C50` — primary brand colour
+- Logo orange `#F26B0F` — accent and highlight colour
+- Warm paper neutrals (`#FAF7F2`, `#F4EEE5`, `#F3EBDF`) — page backgrounds and surfaces
+
+All colour tokens live in `src/styles/variables.css`.
+
+To use a different logo, replace both logo PNGs (keeping the same file names) and regenerate the favicon from the mark. Keep the `width` and `height` attributes in `Logo.jsx` in sync with the image's aspect ratio.
+
 ## What to customise
 
 | What | Where |
@@ -27,7 +47,7 @@ npm run lint     # lint with oxlint
 | Process steps | `src/data/steps.js` |
 | Sample testimonials | `src/data/testimonials.js` |
 | FAQ content | `src/data/faq.js` |
-| Logo mark and wordmark | `src/components/ui/Logo.jsx` |
+| Logo component | `src/components/ui/Logo.jsx` |
 | Brand colours, type, spacing, radii | `src/styles/variables.css` |
 
 All contact details, the address, map query, and social profiles are placeholders. Replace them before launch.
@@ -56,8 +76,10 @@ The three stories are labelled as illustrative sample content and are not presen
 ## Structure
 
 ```
+public/
+  favicon.png          EntryCollege mark favicon
 src/
-  assets/images/       Optimised local photography
+  assets/images/       Optimised local photography + EntryCollege logos
   components/          Page sections and reusable UI
     ui/                Logo, Button, SectionHeading, Reveal, Accordion, Modal
   data/                Editable content

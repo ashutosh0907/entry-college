@@ -52,7 +52,7 @@ export default function Header() {
         className={`header ${isScrolled ? 'header--scrolled' : ''} ${isOpen ? 'header--open' : ''}`}
       >
         <div className="container header__inner">
-          <a className="header__brand" href="#home" aria-label="Northlight Education — back to top">
+          <a className="header__brand" href="#home" aria-label="EntryCollege — back to top">
             <Logo />
           </a>
 
@@ -110,7 +110,7 @@ export default function Header() {
           aria-modal="true"
           aria-label="Mobile navigation"
         >
-          <p className="mobile-menu__label">Explore Northlight</p>
+          <p className="mobile-menu__label">Explore EntryCollege</p>
           <nav aria-label="Mobile navigation links">
             <ul className="mobile-menu__links">
               {site.nav.map((item, index) => (

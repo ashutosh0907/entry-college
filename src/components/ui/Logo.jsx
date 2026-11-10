@@ -1,42 +1,24 @@
-import { useId } from 'react';
+import logoDark from '../../assets/images/entrycollege-logo.png';
+import logoLight from '../../assets/images/entrycollege-logo-light.png';
 
 /**
- * Reusable brand lockup. Replace the SVG mark and wordmark here when a
- * final logo is available.
+ * Brand lockup. The supplied EntryCollege logo already includes the mark and
+ * wordmark, so this component simply swaps between the original artwork and a
+ * white variant for dark backgrounds.
  */
 export default function Logo({ tone = 'dark', className = '' }) {
-  const gradientId = useId();
+  const src = tone === 'light' ? logoLight : logoDark;
 
   return (
     <span className={`logo logo--${tone} ${className}`.trim()}>
-      <svg
-        className="logo__mark"
-        viewBox="0 0 44 44"
-        role="img"
-        aria-label="Northlight compass mark"
-      >
-        <defs>
-          <linearGradient id={gradientId} x1="4" y1="2" x2="40" y2="44" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#20466f" />
-            <stop offset="1" stopColor="#0c2036" />
-          </linearGradient>
-        </defs>
-        <rect
-          width="44"
-          height="44"
-          rx="13"
-          fill={tone === 'light' ? 'rgba(255,255,255,0.10)' : `url(#${gradientId})`}
-        />
-        <path
-          d="M22 8.2 25.15 18.85 35.8 22 25.15 25.15 22 35.8 18.85 25.15 8.2 22 18.85 18.85Z"
-          fill="#ffffff"
-        />
-        <circle cx="22" cy="22" r="2.9" fill="#F4A340" />
-      </svg>
-      <span className="logo__text">
-        <span className="logo__name">Northlight</span>
-        <span className="logo__descriptor">Education</span>
-      </span>
+      <img
+        className="logo__image"
+        src={src}
+        alt="EntryCollege"
+        width="360"
+        height="188"
+        decoding="async"
+      />
     </span>
   );
 }
