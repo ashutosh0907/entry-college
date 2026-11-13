@@ -10,11 +10,26 @@ export default function ServiceCard({ service, onSelect }) {
   const Icon = icons[service.icon] ?? Cpu;
   const titleId = `service-${service.id}-title`;
 
+  const handleClick = () => {
+    onSelect(service.id, service.title);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick();
+    }
+  };
+
   return (
     <article
-      className="service-card"
+      className="service-card service-card--clickable"
       style={{ '--card-accent': service.accent, '--card-accent-soft': service.accentSoft }}
       aria-labelledby={titleId}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
     >
       <div className="service-card__media">
         <img
@@ -51,16 +66,12 @@ export default function ServiceCard({ service, onSelect }) {
           ))}
         </ul>
 
-        <button
-          type="button"
-          className="service-card__cta"
-          onClick={() => onSelect(service.title)}
-        >
-          {service.cta}
+        <div className="service-card__cta">
+          <span>{service.cta}</span>
           <span className="service-card__cta-icon" aria-hidden="true">
             <ArrowUpRight size={17} strokeWidth={2.2} />
           </span>
-        </button>
+        </div>
       </div>
     </article>
   );

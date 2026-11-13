@@ -21,7 +21,7 @@ export const services = [
       'Placement and Career Insights',
       'Admission Process Assistance',
     ],
-    cta: 'Explore Engineering',
+    cta: 'View Engineering Colleges',
   },
   {
     id: 'management',
@@ -41,7 +41,7 @@ export const services = [
       'Entrance Exam Guidance',
       'Career and Placement Insights',
     ],
-    cta: 'Explore Management',
+    cta: 'View Management Colleges',
   },
   {
     id: 'bca-bba',
@@ -61,6 +61,6 @@ export const services = [
       'Admission Documentation',
       'Career Pathway Guidance',
     ],
-    cta: 'Explore BCA / BBA',
+    cta: 'View BCA / BBA Colleges',
   },
 ];
